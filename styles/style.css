@@ -21,7 +21,16 @@
 
 
 /* Para el menú hamburguesa */
-ul {
+
+.respmenu {
+    color: black;
+    position: relative; 
+    min-height: 32px;
+    line-height: 2.3;
+    margin: 20px;
+}
+
+.respmenu  ul {
     list-style: none;
 }
 
@@ -32,27 +41,27 @@ ul {
     text-decoration: none;
     display: block;
     padding: 10px 20px;
-    /* border-bottom: 2px solid #456789; */
     max-width: 320px;
     background: #234567;
-    font-variant: small-caps;
     text-shadow: 1px 1px black;
     background: #0000EC;
 }
 
 .respmenu input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
+    /* lo siguiente permite colocar los iconos de hamburgesa, la X y el checkbox uno encima del otro */
     position: absolute;  
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    /* margin: 0; */
+    /* padding: 0; */
     right: 0;
     top: 0;
-    width: 32px;
-    height: 32px;  
+    width: 18px;
+    height: 18px;  
 }
 
 .respmenu .fa-bars, .respmenu .fa-times {
-    font-size: 32px;
+    font-size: 18px;
+    /* con pointer-events: none;los iconos de hamburgesa y la X no van a recibir los eventos del ratón, de este modo será el checkbox el que los reciba a pesar de estar debajo de los iconos */
     pointer-events: none;
 }
 
@@ -60,13 +69,6 @@ ul {
     opacity: 0; 
 }
 
-.respmenu {
-    color: black;
-    position: relative; 
-    min-height: 32px;
-    height: 224px;
-    line-height: 2.3;
-}
    
   .respmenu nav {
     display: none;
