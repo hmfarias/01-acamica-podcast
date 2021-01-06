@@ -5,38 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://kit.fontawesome.com/fe6a7edfbb.js" crossorigin="anonymous"></script>
     <title>Blog</title>
 </head>
 
 <body>
+    <img src="./images/logo.svg" alt="Logo del Podcast BD">
     <header>
-        <nav>
-            <img src="logo.jpg">
-            <h1>Blog</h1>
-            <ul>
-                <li><a href="http://en.wikipedia.org">Home</a></li>
-                <li><a href="#post2">Blogs</a></li>
-                <li>Contacto</li>
-            </ul>
-        </nav>
+        <!-- para el menú hamburguesa (el checkbox y el nav deben tener identico nivel jerárquico - hermanos) -->
+        <div class="respmenu">
+            <input type="checkbox">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times"></i>
+            <nav>
+                <ul>
+                    <li><a href="#">EPISODIOS</a></li>
+                    <li><a href="#">NOSOTROS</a></li>
+                    <li><a href="#">ENTREVISTAS</a></li>
+                    <li><a href="#">T&OacutePICOS</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- FIN para el menú hamburguesa -->
+
+        <div class="encabezado">
+            <div class="titulo">Hello</div>
+            <div class="titulo" id="strikethrough">world</div>
+            <div class="titulo" >pale blue dot</div>
+            <div class="titulo" id="colored">.</div>
+            <div>Un podcast que explora el mundo de la progmaci&oacuten y la tecnolog&iacutea. Nuevos episodios, todos los jueves cada 15 d&iacuteas.</div>
+            <div>CONOC&Eacute M&AacuteS</div>
+        </div>
     </header>
     <main>
-        <section>
+        <section class="episodios">
+            <h2>EPISODIOS</h2>
             <article>
-                <h2> Título del Post 1</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim repellendus placeat maiores iusto
-                    blanditiis, adipisci reprehenderit. Quos asperiores, veniam sed quasi, impedit est quae nostrum,
-                    facere maxime nulla officia veritatis!</p>
             </article>
-            <article id="post2">
-                <h2 > Título del Post 2</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim repellendus placeat maiores iusto
-                    blanditiis, adipisci reprehenderit. Quos asperiores, veniam sed quasi, impedit est quae nostrum,
-                    facere maxime nulla officia veritatis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, amet. Quaerat quo voluptatibus eligendi necessitatibus, aut rem labore deleniti in tempore impedit reiciendis laboriosam facere nesciunt eveniet maxime reprehenderit. Pariatur hic laboriosam illum reprehenderit voluptatibus ex velit maiores ipsum nesciunt non. Est tenetur numquam sunt eum reprehenderit iure iusto! Ad!</p>
+            <article>
             </article>
+            <article>
+            </article>
+            <article>
+            </article>
+        </section>
+        <section class="venimos">
+            <h2>De d&oacutende venimos</h2>
+        </section>
+        <section class="invitadas">
+            <h2>Invitadas/os estelares</h2>
+        </section>
+        <section class="temas">
+            <h2>Algunos de nuestros temas</h2>
+        </section>
+        <section class="novedades">
+            <h2>¿Quer&eacutes las &uacuteltimas novedades?</h2>
         </section>
     </main>
     <footer>
+        <i class="fab fa-spotify"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-telegram"></i>
         <p>Copyright 2020</p>
     </footer>
 

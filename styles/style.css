@@ -1,0 +1,85 @@
+/* reseteo los valores por defecto */
+@import url('./reset.css');
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+/* font-family: 'IBM Plex Sans', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans&display=swap');
+/* font-family: 'IBM Plex Mono', monospace;  */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap');
+/* font-family: 'IBM Plex Mono', monospace; */
+/* font-family: IBMPlexMono-Medium; ASI ESTA EN EL MODELO */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&display=swap');
+/* font-family: 'IBM Plex Sans', sans-serif; */
+/* font-family: IBMPlexSans-SemiBold; ASI ESTA EN EL MODELO*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Para el menú hamburguesa */
+ul {
+    list-style: none;
+}
+
+.respmenu a { 
+    font-family: 'IBM Plex Mono', monospace; 
+    font-size: 1em;
+    color: #FFFFFF;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    /* border-bottom: 2px solid #456789; */
+    max-width: 320px;
+    background: #234567;
+    font-variant: small-caps;
+    text-shadow: 1px 1px black;
+    background: #0000EC;
+}
+
+.respmenu input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
+    position: absolute;  
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    top: 0;
+    width: 32px;
+    height: 32px;  
+}
+
+.respmenu .fa-bars, .respmenu .fa-times {
+    font-size: 32px;
+    pointer-events: none;
+}
+
+.respmenu input[type="checkbox"] {
+    opacity: 0; 
+}
+
+.respmenu {
+    color: black;
+    position: relative; 
+    min-height: 32px;
+    height: 224px;
+    line-height: 2.3;
+}
+   
+  .respmenu nav {
+    display: none;
+  }
+   
+  .respmenu input:checked ~ nav {
+    display: block;
+  }
+   
+  .respmenu input:checked ~ .fa-bars {
+    display: none;
+  }
+   
+  .respmenu input:not(:checked) ~ .fa-times {
+    display: none;
+  }
