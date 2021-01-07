@@ -20,17 +20,17 @@
 }
 
 
-/* Para el menú hamburguesa */
+/* Para el menú hamburguesa -------------------------------------*/
 
 .respmenu {
-    color: black;
     position: relative; 
-    min-height: 32px;
+    min-height: 18px;
     line-height: 2.3;
-    margin: 20px;
+    margin: 16px;
 }
 
 .respmenu  ul {
+    /* elimino las viñetas de la lista  */
     list-style: none;
 }
 
@@ -48,40 +48,76 @@
 }
 
 .respmenu input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
-    /* lo siguiente permite colocar los iconos de hamburgesa, la X y el checkbox uno encima del otro */
+    /* lo siguiente posiciona los iconos de hamburgesa (.fa-bars), la X (.fa-times) y el checkbox uno encima del otro */
     position: absolute;  
     box-sizing: border-box;
-    /* margin: 0; */
-    /* padding: 0; */
     right: 0;
     top: 0;
+    /* -------------------------------------*/
     width: 18px;
     height: 18px;  
 }
 
 .respmenu .fa-bars, .respmenu .fa-times {
     font-size: 18px;
-    /* con pointer-events: none;los iconos de hamburgesa y la X no van a recibir los eventos del ratón, de este modo será el checkbox el que los reciba a pesar de estar debajo de los iconos */
+    /* con pointer-events: none; los iconos de hamburgesa (.fa-bars) y la X (.fa-times) no van a recibir los eventos del ratón, de este modo será el checkbox el que los reciba a pesar de estar debajo de los iconos */
     pointer-events: none;
 }
 
 .respmenu input[type="checkbox"] {
+    /* para que no se vea el checkbox PERO SI TENGA PRESENCIA COMO PARA SELECCIONARLO, pongo su opacidad en 0 */
     opacity: 0; 
 }
 
    
   .respmenu nav {
+    /* oculto la barra de navegación, que se va a volver a mosrtrar cuando el checkbox esté en estado :checked   */
     display: none;
   }
    
+  /* Mediante al selector de hermanos (~) hago que cuando el ckeckbox esta en estado :checked, se muestre el nav, y cuando no lo esté, el menú se oculte.  */
   .respmenu input:checked ~ nav {
+    /* cuando el checkbox está en estado :checked, muestro la barra de navegación  */
     display: block;
   }
    
   .respmenu input:checked ~ .fa-bars {
+    /* oculto las barras del menu hamburguesa cuando el ckeckbox esté en estado :checked. Se va a volver a mosrtrar cuando el checkbox NO esté en estado :checked. 
+    En este momento estoy mostrando la barra de navegacion y debe aparecer el icono X (.fa-times) para cerrarla; en lugar de las 3 barritas hamburguesa (.fa-bars) */
     display: none;
   }
    
   .respmenu input:not(:checked) ~ .fa-times {
+    /* oculto el icono X, cuando el ckeckbox NO esté en estado :checked. La X se va a volver a mostrar cuando el checkbox vuelva a estado :checked  */
+    /* en este momento NO estoy mostrando la barra de navegación y debe aparecer el ícono hamburguesa que mostrará la barra de navegación al hacerle click (traspasando el click hasta el checkbox debido al atributo pointer-events: none; puesto en los iconos X y barras hamburguesa (.fa-bars y .fa-times) */    
     display: none;
   }
+  /* Fin NAV con menú hamburguesa -------------------------------------*/
+
+  /* Textos del encabezado ---------------------*/
+  .encabezado {
+    max-width: 288px;
+    margin: 16px;
+    /* height: 800px; */
+    /* padding: 15px;
+    margin: auto; */
+    border: 1px solid #2c3e33;
+    display: grid;
+    
+    /* Tamaño fijo */
+    grid-template-columns: 106px 106px 76px;
+    grid-template-rows: 50px 50px 50px 50px;
+    
+    /* Es para darle "Margen" entre cada uno de los elementos */
+    grid-gap: 20px;
+}
+
+.encabezado .titulo {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 2.6em;
+}
+
+#strikethrough {
+    text-decoration: line-through;
+
+}
