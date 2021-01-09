@@ -19,26 +19,27 @@
             <i class="fas fa-times"></i>
             <nav>
                 <ul>
-                    <li><a href="#">EPISODIOS</a></li>
-                    <li><a href="#">NOSOTROS</a></li>
-                    <li><a href="#">ENTREVISTAS</a></li>
-                    <li><a href="#">T&OacutePICOS</a></li>
+                    <li><a href="#episodios">EPISODIOS</a></li>
+                    <li><a href="#nosotros">NOSOTROS</a></li>
+                    <li><a href="#entrevistas">ENTREVISTAS</a></li>
+                    <li><a href="#topicos">T&OacutePICOS</a></li>
                 </ul>
             </nav>
         </div>
         <!-- FIN para el menú hamburguesa -->
 
+        <!-- Texto encabezado -->
         <div class="encabezado">
-            <div class="titulo">Hello</div>
-            <div class="titulo" id="strikethrough">world</div>
-            <div class="titulo" >pale blue dot</div>
-            <div class="titulo" id="colored">.</div>
-            <div>Un podcast que explora el mundo de la progmaci&oacuten y la tecnolog&iacutea. Nuevos episodios, todos los jueves cada 15 d&iacuteas.</div>
-            <div>CONOC&Eacute M&AacuteS</div>
+            <div class="titulo column1to2">Hello</div>
+            <div class="titulo column2to3 strikethrough">world</div>
+            <div class="titulo column1to4">pale blue dot</div>
+            <div class="titulo column4to5 blueColored">.</div>
+            <div class="subTitulo column1to5 row4to5" >Un podcast que explora el mundo de la programaci&oacuten. Nuevos episodios, todos los jueves cada 15 d&iacuteas.</div>
+            <a href="#conoceMas" class="column1to5 row6to7 button">CONOC&Eacute M&AacuteS</a>
         </div>
     </header>
     <main>
-        <section class="episodios">
+        <section class="episodios" id="episodios">
             <h2>EPISODIOS</h2>
             <article>
             </article>
@@ -49,18 +50,31 @@
             <article>
             </article>
         </section>
-        <section class="venimos">
+        <section class="venimos" id="nosotros">
             <h2>De d&oacutende venimos</h2>
         </section>
-        <section class="invitadas">
+        <section class="invitadas" id="entrevistas">
             <h2>Invitadas/os estelares</h2>
         </section>
-        <section class="temas">
+        <section class="temas" id="topicos">
             <h2>Algunos de nuestros temas</h2>
         </section>
-        <section class="novedades">
+        <section class="novedades" id="conoceMas">
             <h2>¿Quer&eacutes las &uacuteltimas novedades?</h2>
         </section>
+       
+       
+       
+       
+        <div class="menu-activador">
+            <input type="checkbox" id="lanzador" />
+            <label for="lanzador">
+              <span class="menu-activador-linea"></span>
+              <span class="menu-activador-linea"></span>
+              <span class="menu-activador-linea"></span>
+            </label>
+        </div>
+
     </main>
     <footer>
         <i class="fab fa-spotify"></i>
