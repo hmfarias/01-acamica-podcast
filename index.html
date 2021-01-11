@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.svg" />
     <link rel="stylesheet" href="./styles/style.css">
     <script src="https://kit.fontawesome.com/fe6a7edfbb.js" crossorigin="anonymous"></script>
-    <title>Blog</title>
+    <title>Blue dot</title>
 </head>
 
 <body>
@@ -28,37 +29,91 @@
         </div>
         <!-- FIN para el menú hamburguesa -->
 
-        <!-- Texto encabezado -->
-        <div class="encabezado">
-            <div class="titulo column1to2">Hello</div>
-            <div class="titulo column2to3 strikethrough">world</div>
-            <div class="titulo column1to4">pale blue dot</div>
-            <div class="titulo column4to5 blueColored">.</div>
-            <div class="subTitulo column1to5 row4to5" >Un podcast que explora el mundo de la programaci&oacuten. Nuevos episodios, todos los jueves cada 15 d&iacuteas.</div>
-            <a href="#conoceMas" class="column1to5 row6to7 button">CONOC&Eacute M&AacuteS</a>
-        </div>
     </header>
+    <!-- Texto encabezado -->
+    <div class="encabezado">
+        <div class="titulo column1to2">Hello</div>
+        <div class="titulo column2to3 strikethrough">world</div>
+        <div class="titulo column1to4">pale blue dot</div>
+        <div class="titulo column4to5 blueColored">.</div>
+        <div class="subTitulo column1to5 row4to5" >Un podcast que explora el mundo de la programaci&oacuten. Nuevos episodios, todos los jueves cada 15 d&iacuteas.</div>
+        <a href="#conoceMas" class="column1to5 row6to7 button">CONOC&Eacute M&AacuteS</a>
+    </div>
+
     <main>
         <section class="episodios" id="episodios">
-            <h2>EPISODIOS</h2>
+            <h2>Episodios</h2>
+            
             <article>
+                <iframe class="episodioSpoti" src="https://open.spotify.com/embed-podcast/episode/7AZZy2nJ4R9ZndHW0h2yxt" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </article>
+
             <article>
+                <iframe class="episodioSpoti" src="https://open.spotify.com/embed-podcast/episode/1ezdL2ivAGLwSE6Xbssxqt" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </article>
+
             <article>
+                <iframe class="episodioSpoti" src="https://open.spotify.com/embed-podcast/episode/3cWta1iiQSfvrdHaCbLkSD" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </article>
+            
             <article>
+                <iframe class="episodioSpoti" src="https://open.spotify.com/embed-podcast/episode/5mddqHiI96V0ZMdMidn3WW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </article>
+
         </section>
         <section class="venimos" id="nosotros">
-            <h2>De d&oacutende venimos</h2>
+            <img src="./images/phone.png" alt="The Secret History of Women in Coding">
+            
+            <article>
+                <h2>De d&oacutende venimos</h2>
+                <p>Our posturing, our imagined self-importance the desilusion that we have some privileged position in the Universe, are challenged by this point of pale light.
+                </p>
+                <p> Our plante is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.
+                </p> 
+            </article>
+
         </section>
-        <section class="invitadas" id="entrevistas">
+
+        <section class="invitados" id="entrevistas">
             <h2>Invitadas/os estelares</h2>
+            <article class="invitadosGrilla">
+
+                <div>
+                    <img src="images/grace-hopper.png" alt="Grace Hopper">
+                </div>
+
+                <div>
+                    <img src="images/Katie-Bouman.png" alt="Katie Bouman">
+                </div>
+
+                <div>
+                    <img src="images/Margaret_Hamilton.png" alt="Margaret Hamilton">
+                </div>
+
+                <div>
+                    <img src="images/An E.R.A.Univac 1103 computer in the 1950s.png" alt="An E.R.A.Univac 1103 computer in the 1950s">
+                </div>
+
+                <div class="invitados__card">
+                    <img class="invitados__img"
+                        src="images/Computer operators with an Eniac — the world’s first programmable general-purpose computer.png"
+                        alt="Eniac : La primera computadora programable en el mundo.">
+                </div>
+
+                <div class="invitados__card">
+                    <img class="invitados__img" src="images/susan-kare.png" alt="Susan Kare">
+                </div>
+
+            </article>
+
+
+
         </section>
+
         <section class="temas" id="topicos">
             <h2>Algunos de nuestros temas</h2>
         </section>
+
         <section class="novedades" id="conoceMas">
             <h2>¿Quer&eacutes las &uacuteltimas novedades?</h2>
         </section>
@@ -66,14 +121,6 @@
        
        
        
-        <div class="burguer">
-            <input type="checkbox" id="lanzador" />
-            <label for="lanzador">
-              <span class="burguer-linea"></span>
-              <span class="burguer-linea"></span>
-              <span class="burguer-linea"></span>
-            </label>
-        </div>
 
     </main>
     <footer>
