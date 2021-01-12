@@ -14,6 +14,13 @@
   box-sizing: border-box;
 }
 
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 2.3rem;
+}
+
+
 /* Para el menú hamburguesa -----------------------------------------*/
 
 .respmenu {
@@ -33,7 +40,7 @@
   font-family: "IBM Plex Mono", monospace;
   font-size: 1em;
   color: #ffffff;
-  text-decoration: none;
+  /* text-decoration: none; */
   display: block;
   padding: 10px 20px;
   max-width: 320px;
@@ -99,16 +106,16 @@
 
 /* Textos del encabezado -------------------------------------------*/
 .encabezado {
-  /* max-width: 288px; */
-  /* margin: 16px; */
-  margin: 39px 16px 24px 16px;
-  display: grid;
-  grid-template-columns: 85px 101px 26px 76px;
-  /* grid-template-columns: 29.51% 35.07% 9.03% 26.39%; */
-  grid-template-rows: 42px 42px 16px 66px 36px 48px;
+  width: 90%;
+  margin: auto;
+  padding: 10vw 0 1.6rem 0;
 }
 
-.encabezado .titulo {
+
+.titulo {
+  /* para que el texto quede en dos filas  */
+  width: 90%;
+
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 2.25em;
   line-height: 42px;
@@ -116,70 +123,43 @@
 
 .strikethrough {
   text-decoration: line-through;
-  text-align: right;
-}
-.column1to2 {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  /* si */
-}
-
-.column2to3 {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  /* si; */
-}
-
-.column1to4 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  /* si; */
-}
-
-.column4to5 {
-  grid-column-start: 4;
-  grid-column-end: 5;
+  /* text-align: right; */
 }
 
 .blueColored {
   color: #060a24;
 }
 
-.column1to5 {
-  grid-column-start: 1;
-  grid-column-end: 5;
-}
-
-.row4to5 {
-  grid-row-start: 4;
-  grid-row-end: 5;
-}
-
-.row6to7 {
-  grid-row-start: 6;
-  grid-row-end: 7;
-}
-
-.encabezado .subTitulo {
+.subTitulo {
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.875em;
   line-height: 22px;
   text-align: justify;
 }
 
+.mobile {
+  margin-top: 6vw;
+}
+
+.desktop {
+  display: none;
+}
+
 /* Boton animado ------------------------- */
 .button {
-  /* background-image: linear-gradient(102deg, #4551b5 40%, #543fd7 60%); */
+  display: block;
   color: #060a24;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'IBMPlexMono-Medium',monospace;
   font-size: 1em;
+  padding: .5em;
   text-align: center;
-  line-height: 3;
-  font-weight: 500;
-  text-decoration: none;
-  background-color: #00f3bb;
-  width: 288px;
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+  width: 100%;
+  line-height: 2.2rem;
+  background-color: #00F3BB;
+  cursor: pointer;
+  margin-top: 10vw;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5); */
+  
   /* creo la animación nombre=pulse dura 1.5s y se repite */
   animation: pulse 1.5s infinite;
 }
@@ -283,8 +263,9 @@ con un gradiente linear 90º como imágen de fondo*/
 .venimos {
   min-height: 100vh;
   
-  
+
 }
+
 .venimos img {
   width: 100%;
   height: auto;
@@ -307,7 +288,7 @@ con un gradiente linear 90º como imágen de fondo*/
   width: 90%;
   margin: auto;
 }
-/* FIN QUIENES SOMOS --------------------------------------------*/
+/* FIN QUIENES SOMOS `--------------------------------------------*/
 /*INVITADOS --------------------------------------------*/
 .invitados {
   margin-top: 12%;
