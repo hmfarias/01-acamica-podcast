@@ -177,7 +177,7 @@ a {
     /* con esto hago que el boton se haga apenas dos puntos pequeño (1 es igual, 1.5 es un 50% mas grande, 0.5 es un 50% mas chico, etc etc) */
     transform: scale(0.98);
     /* tambien agrego una pequeña sombra gris que no se vea totalmente gris sino que tenga cierta transparencia */
-    box-shadow: 0 0 0 0 rgba(95, 95, 95, 0.1);
+    box-shadow: 0 0 0 0 rgba(95, 95, 95, 0.2);
   }
 
   /* ahora avanzo en la animación hasta el 70% */
@@ -213,7 +213,8 @@ section h2 {
   /* background: rgb(0,0,255); */
   /* background: linear-gradient(180deg, rgba(0,0,255,1) 0%, rgba(0,0,163,1) 100%); */
   /* height: 1203.5px; */
-  margin-top: 100px;
+  /* margin-top: 70px; */
+  margin-top: 11vh;
   height: 1040px;
   position: relative;
   
@@ -229,8 +230,7 @@ con un gradiente linear 90º como imágen de fondo*/
   /* para que se pase un poco invadiendo la siguiente sección le doy un height un poco superior */
   height: 115%;
   background: rgb(0,0,255);/*por si el navegador no soportara gradiente*/
-  background-image: -webkit-gradient(linear, top, bottom, from(#0000A3), to(#0000FF));
-  background-image: linear-gradient(180deg, #0000FF , #0000A3);
+  background-image: linear-gradient(45deg, #0000A3, #0000FF);
   position: absolute;
   width: 100%;
 
@@ -294,22 +294,123 @@ con un gradiente linear 90º como imágen de fondo*/
   margin-top: 12%;
   width: 100%;
 }
- .invitadosGrilla {
-   display: flex;
-   flex-direction: column;
- }
+.invitados h2 {
+  margin-left: 1rem;
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 2.62rem;
 
- .invitados article div {
-   /* para poder sacar el margen minimo que queda entre imagen e imagen  */
-   margin: -1%;
- }
+}
+
+.invitadosGrilla {
+  display: flex;
+  flex-direction: column;
+}
+
+.invitados article div {
+  /* para poder sacar el margen minimo que queda entre imagen e imagen  */
+  margin: -1%;
+}
 
 .invitados article div img {
   width: 100%;
   height: auto;
 }
 /*FIN NVITADOS --------------------------------------------*/
+
+/*TEMAS --------------------------------------------*/
+.temas {
+  margin: 3rem auto auto auto;
+  width: 100%;
+  width: 90%;
+}
+
+.temas h2 {
+  margin: 0;
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 2.62rem;
+}
+
+.temas ul {
+  text-align: center;
+}
+
+.temas ul li {
+  margin-top: 15%;
+}
+
+.temas ul li h3 {
+  margin: .7rem 0 0 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2rem;
+
+}
+/*FIN TEMAS --------------------------------------------*/
+
+/*NOVEDADES --------------------------------------------*/
+.novedades {
+  margin: 3rem auto auto auto;
+  width: 100%;
+  width: 100%;
+  min-height: 340px;
+  background: rgb(0,0,255);/*por si el navegador no soportara gradiente*/
+  background-image: linear-gradient(45deg, #0000A3, #0000FF);
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.novedades h2 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 2.25em;
+  margin: 0 auto 0 auto;
+  width: 60%;
+  line-height: 2.5rem;
+  color: #FFFFFF;
+}
+
+.novedades .button {
+  width: 90%;
+}
+/*FIN NOVEDADES --------------------------------------------*/
 /* FIN SECCIONES  ------------------ */
+
+/*FOOTER --------------------------------------------*/
+.pieDePagina {
+  width: 90%;
+  margin: auto;
+  max-width: 80%;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
+
+.pieDePagina p {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .87em ;
+  text-align: center;
+}
+
+.pieDePagina ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.pieDePagina li a {
+  color: #060A24;
+}
+
+/*FIN FOOTER --------------------------------------------*/
+
 
 /* *prueba para un menú activador animado */
 
