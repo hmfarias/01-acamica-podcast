@@ -8,45 +8,46 @@
    font-family: IBMPlexMono-Medium; ASI ESTA EN EL MODELO 
    font-family: IBMPlexSans-SemiBold; ASI ESTA EN EL MODELO */
 
-
+   
+/* cuestiones base para todo el cuerpo html - luego personalizo segun el caso */
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+html {
+  /* con esta formula logro un font-size de 16px para un ancho de pantalla de 320 como está en el mockup -  ESCALABLE DESPUES USANDO REM */
+  font-size: calc(.8em + 1vw)
+}
+
+body{
+  color: #060A24;
+  font-size: 1rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+  letter-spacing: 0;
+}
+
 a {
+  font-family: "IBM Plex Mono", monospace;
   text-transform: uppercase;
   text-decoration: none;
-  line-height: 2.3rem;
+  line-height: 2.3em;
 }
 
 
 /* Para el menú hamburguesa -----------------------------------------*/
 
-.respmenu {
-  position: relative;
-  min-height: 18px;
-  line-height: 2.3;
-  /* margin: 16px; */
-  margin: auto;
-}
-
 .respmenu ul {
-  /* elimino las viñetas de la lista  */
-  list-style: none;
+  height: 224px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .respmenu a {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 1em;
-  color: #ffffff;
-  /* text-decoration: none; */
-  display: block;
+  font-size: 16px;
+  color: #FFFFFF;
   padding: 10px 20px;
-  max-width: 320px;
-  background: #234567;
-  text-shadow: 1px 1px black;
-  background: #0000ec;
+  text-shadow: 2px 2px black;
 }
 
 /* .respmenu input[type="checkbox"], <---Puedo identificarlo así o directamente por el label lanzaMenu*/
@@ -83,6 +84,8 @@ a {
 .respmenu nav {
   /* oculto la barra de navegación, que se va a volver a mosrtrar cuando el checkbox esté en estado :checked   */
   display: none;
+  background-color: #0000EC;
+  margin-top: 10px;
 }
 
 /* Mediante al selector de hermanos (~) hago que cuando el ckeckbox esta en estado :checked, se muestre el nav, y cuando no lo esté, el menú se oculte.  */
@@ -93,7 +96,7 @@ a {
 
 .respmenu #lanzaMenu:checked ~ .fa-bars {
   /* oculto las barras del menu hamburguesa cuando el ckeckbox esté en estado :checked. Se va a volver a mosrtrar cuando el checkbox NO esté en estado :checked. 
-    En este momento estoy mostrando la barra de navegacion y debe aparecer el icono X (.fa-times) para cerrarla; en lugar de las 3 barritas hamburguesa (.fa-bars) */
+  En este momento estoy mostrando la barra de navegacion y debe aparecer el icono X (.fa-times) para cerrarla; en lugar de las 3 barritas hamburguesa (.fa-bars) */
   display: none;
 }
 
@@ -102,9 +105,68 @@ a {
   /* en este momento NO estoy mostrando la barra de navegación y debe aparecer el ícono hamburguesa que mostrará la barra de navegación al hacerle click (traspasando el click hasta el checkbox debido al atributo pointer-events: none; puesto en los iconos X y barras hamburguesa (.fa-bars y .fa-times) */
   display: none;
 }
+
+/* transformo el menu vertical a horizontal a partir de los 768px */
+@media only screen and (min-width: 768px){
+  
+  .respmenu {
+    width: 86.11%;
+    height: 80px;
+    line-height: 50px;
+    margin: auto auto 8.334vw auto;
+    /* margin-top: 16px; */
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .respmenu #lanzaMenu, .fa-bars, .fa-times {
+    display: none;
+  }
+  
+  .respmenu img {
+    width: 36px;
+    height: auto;
+    margin:0;
+  }
+  
+  .respmenu nav {
+    /* para que el menú aparezca siempre, aunque el checkbox haya quedado not checked */
+    display: block;
+    
+    background-color: #FFFFFF;
+  }
+  
+  .respmenu nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    height: auto;
+  }
+  
+  .respmenu nav ul li a {
+    color: #060A24;
+    text-shadow: none;
+    padding: 10px 0 10px 40px;
+  }
+  
+  .respmenu nav ul li a:link {
+    color: #060A24;
+  }
+  
+  .respmenu nav ul li a:hover {
+    color: #00F3BB;
+    text-decoration: line-through;
+  }
+  
+  .respmenu nav ul li a:active {
+    color: #060A24;
+    opacity: .56;
+    text-decoration: line-through;
+  }
+}
 /* Fin NAV con menú hamburguesa -------------------------------------*/
 
-/* Textos del encabezado -------------------------------------------*/
+
+/* TITULO Textos del encabezado -------------------------------------------*/
 .encabezado {
   width: 90%;
   margin: auto;
@@ -115,9 +177,7 @@ a {
 .titulo {
   /* para que el texto quede en dos filas  */
   width: 90%;
-
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 2.25em;
+  font-size: 2.25rem;
   line-height: 42px;
 }
 
@@ -149,8 +209,8 @@ a {
 .button {
   display: block;
   color: #060a24;
-  font-family: 'IBMPlexMono-Medium',monospace;
   font-size: 1em;
+  font-weight: 500;
   padding: .5em;
   text-align: center;
   width: 100%;
@@ -197,28 +257,66 @@ a {
   }
 }
 /* FIN Boton animado ------------------------- */
+
+/* adapto los textos del encabezado a partir de los 768px */
+@media only screen and (min-width: 768px) {
+
+  .encabezado {
+  width: 72.22%;
+  padding: 0 0 1.6rem 0;
+  }
+
+  .encabezado p:last-of-type {
+    display: inline-block;
+    width: 70%;
+
+  }
+
+
+  .titulo {
+    /* para que el texto quede en dos filas  */
+    width: 100%;
+    font-size: 2.356rem;
+    margin-bottom: 16px;
+  }
+
+  .blueColored {
+  color: #0000EC ;
+  }
+
+  .subTitulo {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: justify;
+  margin-bottom: 56px ;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: inline;
+  }
+
+  .button {
+    font-size: 18px;
+    padding: 0;
+    text-align: center;
+    width: 226px;
+    height: 56px;
+    line-height: 55px;
+    margin-top: 0;
+  }   
+}
 /* FIN Textos del encabezado ----------------------------------------*/
 
 /* SECCIONES ------------------------------------------------------ */
 /* EPISODIOS --------------------------------------------*/
-section h2 {
-  display: inline-block;
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 36px;
-  color:#060A24;
-  margin: 0px auto 10px 16px;
-}
-
 .episodios{
-  /* background: rgb(0,0,255); */
-  /* background: linear-gradient(180deg, rgba(0,0,255,1) 0%, rgba(0,0,163,1) 100%); */
-  /* height: 1203.5px; */
-  /* margin-top: 70px; */
   margin-top: 11vh;
   height: 1040px;
   position: relative;
-  
-  
 }
 
 /* creo la forma de paralelogramo que va a tener de fondo la seccion Episodios 
@@ -226,14 +324,13 @@ va a ocupar el 100% del ancho y de la altura de la seccion
 con un gradiente linear 90º como imágen de fondo*/
 .episodios::before {
   content: '';
-  
   /* para que se pase un poco invadiendo la siguiente sección le doy un height un poco superior */
   height: 115%;
   background: rgb(0,0,255);/*por si el navegador no soportara gradiente*/
   background-image: linear-gradient(45deg, #0000A3, #0000FF);
   position: absolute;
   width: 100%;
-
+  
   /* para que se despeguedel encabezado lo ubico de forma absoluta un poco por debajo */
   top: -5%;
   
@@ -246,6 +343,9 @@ con un gradiente linear 90º como imágen de fondo*/
 }
 
 .episodios h2 {
+  display: inline-block;
+  font-size: 36px;
+  margin: 0px auto 10px 16px;
   color: #FFFFFF;
 }
 
@@ -257,14 +357,39 @@ con un gradiente linear 90º como imágen de fondo*/
   width: 100%;
   height: 232px;
 }
+
+/* adapto los EPISODIOS a partir de los 768px */
+@media only screen and (min-width: 768px) {
+
+  .episodios {
+    height: 760px;
+  }
+  
+  .episodios h2 {
+    font-size: 48px;
+    margin: 95px auto 26px 200px;
+  }
+
+  .episodios::before {
+    top: -1%;
+  }
+
+  .contieneArt {
+    width: 86.11%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 47.1%);
+    align-content: center;
+    gap: 72px;
+  }
+
+  .episodios article {
+    margin: 0;
+  }
+}
 /* FIN EPISODIOS -------------------------------------------------------*/
 
 /* QUIENES SOMOS --------------------------------------------*/
-.venimos {
-  min-height: 100vh;
-  
-
-}
 
 .venimos img {
   width: 100%;
@@ -288,6 +413,32 @@ con un gradiente linear 90º como imágen de fondo*/
   width: 90%;
   margin: auto;
 }
+
+
+/* adapto la seccion de quienes somos  a partir de los 768px */
+@media only screen and (min-width: 768px){
+
+  .venimos {
+    width: 72.22%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 39.2% 44% 16.8%;
+  }
+  .venimos img {
+    margin-top: .4em; 
+  }
+  .venimos article h2 {
+    font-size: 1.76rem;
+  }
+  .venimos article p {
+    font-size: 16px;
+    text-align: left;
+  }
+
+}
+
+
+
 /* FIN QUIENES SOMOS `--------------------------------------------*/
 /*INVITADOS --------------------------------------------*/
 .invitados {
@@ -340,9 +491,9 @@ con un gradiente linear 90º como imágen de fondo*/
   margin-top: 15%;
 }
 
+/* texto debajo de la imagenes de cada tema */
 .temas ul li h3 {
   margin: .7rem 0 0 0;
-  font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -367,7 +518,6 @@ con un gradiente linear 90º como imágen de fondo*/
 }
 
 .novedades h2 {
-  font-family: 'IBM Plex Sans', sans-serif;
   font-size: 2.25em;
   margin: 0 auto 0 auto;
   width: 60%;
@@ -408,9 +558,7 @@ con un gradiente linear 90º como imágen de fondo*/
 .pieDePagina li a {
   color: #060A24;
 }
-
 /*FIN FOOTER --------------------------------------------*/
-
 
 /* *prueba para un menú activador animado */
 
