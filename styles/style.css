@@ -363,7 +363,7 @@ con un gradiente linear 90º como imágen de fondo*/
 @media only screen and (min-width: 768px) {
 
   .episodios {
-    height: 760px;
+    height: 750px;
   }
   
   .episodios h2 {
@@ -373,6 +373,7 @@ con un gradiente linear 90º como imágen de fondo*/
 
   .episodios::before {
     top: -1%;
+    height: 105%;
   }
 
   .contieneArt {
@@ -386,6 +387,16 @@ con un gradiente linear 90º como imágen de fondo*/
 
   .episodios article {
     margin: 0;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .episodios {
+    height: 760px;
+  }
+  .episodios::before {
+    top: -1%;
+    height: 112%;
   }
 }
 /* FIN EPISODIOS -------------------------------------------------------*/
@@ -423,7 +434,8 @@ con un gradiente linear 90º como imágen de fondo*/
     width: 72.22%;
     margin: auto;
     display: grid;
-    grid-template-columns: 39.2% 50% 10.8%;
+    grid-template-columns: 31.77% 50% 10.23%;
+    column-gap: 4%;
   }
   
   .venimos img {
@@ -432,7 +444,7 @@ con un gradiente linear 90º como imágen de fondo*/
 
   .venimos article h2 {
     font-size: 1.76rem;
-    margin-top: 110px;
+
   }
 
   .venimos article p {
@@ -446,14 +458,13 @@ con un gradiente linear 90º como imágen de fondo*/
     margin-top: 16px;
   }
 }
-
-/* adapto la seccion de quienes somos  a partir de los 1024px */
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1440px){
   .venimos article h2 {
-   margin-top: 20px;
+    margin-top: 4rem;
   }
-
 }
+
+
 
 /* FIN QUIENES SOMOS `--------------------------------------------*/
 /*INVITADOS --------------------------------------------*/
@@ -462,7 +473,7 @@ con un gradiente linear 90º como imágen de fondo*/
   width: 100%;
 }
 .invitados h2 {
-  margin-left: 1rem;
+  margin: 0 0 .875rem 1rem;
   font-size: 2.25rem;
   font-weight: 400;
   line-height: 2.62rem;
@@ -483,12 +494,27 @@ con un gradiente linear 90º como imágen de fondo*/
   width: 100%;
   height: auto;
 }
+
+/* adapto la seccion de invitados a partir de los 768px */
+@media only screen and (min-width: 768px){
+  .invitados {
+    margin-top: 0;
+  }
+  .invitados h2 {
+    margin: 64px auto 36px 200px;
+    font-size: 1.8rem;
+  }
+
+  .invitadosGrilla {
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+  }
+}
 /*FIN NVITADOS --------------------------------------------*/
 
 /*TEMAS --------------------------------------------*/
 .temas {
   margin: 3rem auto auto auto;
-  width: 100%;
   width: 90%;
 }
 
@@ -499,7 +525,7 @@ con un gradiente linear 90º como imágen de fondo*/
   line-height: 2.62rem;
 }
 
-.temas ul {
+.temasGrilla {
   text-align: center;
 }
 
@@ -515,14 +541,42 @@ con un gradiente linear 90º como imágen de fondo*/
   line-height: 2rem;
 
 }
+
+/* adapto la seccion de TEMAS a partir de los 768px */
+@media only screen and (min-width: 768px) {
+  .temas {
+    width: 72.22%;
+    margin: 64px auto auto auto;
+  }
+
+  .temas h2 {
+    font-size: 48px;
+  }
+
+  .temasGrilla {
+    margin: 56px 20px 34px 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .temas ul li {
+    margin-top: 0;
+  }
+
+  .temas ul li h3 {
+    font-size: 24px;
+    width: 220px;
+    line-height: 32px;
+  }
+}
 /*FIN TEMAS --------------------------------------------*/
 
 /*NOVEDADES --------------------------------------------*/
 .novedades {
   margin: 3rem auto auto auto;
   width: 100%;
-  width: 100%;
   min-height: 340px;
+  height: 21.31rem;
   background: rgb(0,0,255);/*por si el navegador no soportara gradiente*/
   background-image: linear-gradient(45deg, #0000A3, #0000FF);
   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
@@ -544,6 +598,25 @@ con un gradiente linear 90º como imágen de fondo*/
 .novedades .button {
   width: 90%;
 }
+
+/* adapto la seccion de NOVEDADES a partir de los 768px */
+@media only screen and (min-width: 768px) {
+  .novedades {
+    clip-path: polygon(0 28%, 100% 0, 100% 100%, 0% 100%);
+    height: auto;
+  }
+
+  .novedades h2 {
+    font-size: 48px;
+    margin: 7.3rem auto 1.2rem auto;
+  }
+
+  .novedades .button {
+    width: 23.959%;
+    height: 56px;
+    margin-bottom: 151px;
+  }
+}
 /*FIN NOVEDADES --------------------------------------------*/
 /* FIN SECCIONES  ------------------ */
 
@@ -552,7 +625,7 @@ con un gradiente linear 90º como imágen de fondo*/
   width: 90%;
   margin: auto;
   max-width: 80%;
-  min-height: 120px;
+  height: 95px; 
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -561,7 +634,7 @@ con un gradiente linear 90º como imágen de fondo*/
 
 .pieDePagina p {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: .87em ;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -573,6 +646,38 @@ con un gradiente linear 90º como imágen de fondo*/
 
 .pieDePagina li a {
   color: #060A24;
+}
+
+/* adapto el FOOTER a partir de los 768px */
+@media only screen and (min-width: 768px) {
+  .pieDePagina {
+    width: 86.11%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .pieDePagina p {
+    font-size: 16px;
+    height: 16px;
+    
+  }
+  .socialesGrilla {
+    /* width: 16.25%; */
+    width: 234px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .socialesGrilla li {
+    height: auto;
+    font-size: 18px;
+  }
+
+
+
+
 }
 /*FIN FOOTER --------------------------------------------*/
 
