@@ -119,8 +119,9 @@ a {
     justify-content: space-between;
   }
   
-  .respmenu #lanzaMenu, .fa-bars, .fa-times {
+  #lanzaMenu, .fa-bars, .fa-times {
     display: none;
+    opacity: 0;
   }
   
   .respmenu img {
