@@ -527,11 +527,15 @@ con un gradiente linear 90º como imágen de fondo*/
 
 .temasGrilla {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .temas ul li {
   margin-top: 15%;
 }
+
 
 /* texto debajo de la imagenes de cada tema */
 .temas ul li h3 {
@@ -555,8 +559,9 @@ con un gradiente linear 90º como imágen de fondo*/
 
   .temasGrilla {
     margin: 56px 20px 34px 20px;
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .temas ul li {
