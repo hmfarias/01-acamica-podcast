@@ -424,12 +424,15 @@ con un gradiente linear 90º como imágen de fondo*/
     display: grid;
     grid-template-columns: 39.2% 44% 16.8%;
   }
+  
   .venimos img {
     margin-top: .4em; 
   }
+
   .venimos article h2 {
     font-size: 1.76rem;
   }
+
   .venimos article p {
     font-size: 16px;
     text-align: left;
