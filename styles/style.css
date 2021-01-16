@@ -402,6 +402,10 @@ con un gradiente linear 90º como imágen de fondo*/
 /* FIN EPISODIOS -------------------------------------------------------*/
 
 /* QUIENES SOMOS --------------------------------------------*/
+.venimos {
+  display: flex;
+  flex-direction: column;
+}
 
 .venimos img {
   width: 100%;
@@ -431,11 +435,11 @@ con un gradiente linear 90º como imágen de fondo*/
 @media only screen and (min-width: 768px){
 
   .venimos {
-    width: 72.22%;
+    width: 80%;
     margin: auto;
     display: grid;
-    grid-template-columns: 31.77% 50% 10.23%;
-    column-gap: 4%;
+    grid-template-columns: 39.77% 54% 0%;
+    column-gap: 2%;
   }
   
   .venimos img {
@@ -444,12 +448,12 @@ con un gradiente linear 90º como imágen de fondo*/
 
   .venimos article h2 {
     font-size: 1.76rem;
+    margin-top: 3rem;
 
   }
 
   .venimos article p {
     width: 100%;
-    font-size: 16px;
     text-align: left;
     margin-top: 24px;
   }
@@ -458,9 +462,25 @@ con un gradiente linear 90º como imágen de fondo*/
     margin-top: 16px;
   }
 }
+
 @media only screen and (min-width: 1440px){
+  .venimos {
+    width: 72.22%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 31.77% 50% 10.23%;
+    column-gap: 4%;
+  }
+
   .venimos article h2 {
     margin-top: 4rem;
+  }
+
+  .venimos article p {
+    width: 100%;
+    font-size: 16px;
+    text-align: left;
+    margin-top: 24px;
   }
 }
 
