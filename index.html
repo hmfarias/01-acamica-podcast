@@ -13,7 +13,7 @@
 <body>
     <header>
         <!-- para ccel menú hamburguesa (el checkbox y el nav deben tener identico nivel jerárquico - hermanos) -->
-        <div class="respmenu">
+        <!-- <div class="respmenu">
             <img src="./images/logo.svg" alt="Logo del Podcast BD">
             <input type="checkbox" id="lanzaMenu">
             <i class="fas fa-bars"></i>
@@ -26,7 +26,29 @@
                     <li><a href="#topicos">T&OacutePICOS</a></li>
                 </ul>
             </nav>
+        </div> -->
+
+        <div class="burguer">
+            <img src="./images/logo.svg" alt="Logo del Podcast BD">
+            <input type="checkbox" id="lanzador" />
+            <label for="lanzador">
+              <span class="burguer-linea"></span>
+              <span class="burguer-linea"></span>
+              <span class="burguer-linea"></span>
+            </label>
+            <nav>
+                <ul>
+                    <li><a href="#episodios">EPISODIOS</a></li>
+                    <li><a href="#nosotros">NOSOTROS</a></li>
+                    <li><a href="#entrevistas">ENTREVISTAS</a></li>
+                    <li><a href="#topicos">T&OacutePICOS</a></li>
+                </ul>
+            </nav>
         </div>
+
+
+
+
         <!-- FIN para el menú hamburguesa -->
 
         <!-- Texto encabezado -->
@@ -145,7 +167,7 @@
     </main>
     <footer class="pieDePagina">
         <p>&copy; 2021- Hello blue pale dot</p>
-        <ul class="socialesGrilla">
+        <ul class="socialesFlex">
             <li>
                 <a href="#">
                     <i class="fab fa-spotify"></i>

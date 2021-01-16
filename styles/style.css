@@ -104,6 +104,90 @@ a {
   display: none;
 }
 
+
+.burguer {
+}
+
+.burguer #lanzador {
+  width: 20px;
+  height: 13.5px;
+  position: absolute;
+  right: 16px;
+  top: 18px; /*poner 10 desi*/
+  
+  /* margin-top: 50px; */
+  position: absolute;
+  left: -9999px;
+
+}
+
+.burguer label {
+  width: 20px;
+  height: 13.5px;
+  position: absolute;
+  right: 16px;
+  top: 18px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.burguer .burguer-linea {
+  height: 2px;
+  background-color: #000;
+  opacity: 1;
+  transform: translateY(0) rotate(0);
+  transition: all 0.3s;
+}
+
+.burguer ul {
+  height: 224px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.burguer a {
+  font-size: 16px;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  text-shadow: 2px 2px black;
+}
+
+.burguer img {
+  margin-left: 16px;
+  margin-top: 10px;
+}
+
+
+.burguer nav {
+  /* oculto la barra de navegación, que se va a volver a mosrtrar cuando el checkbox esté en estado :checked   */
+  display: none;
+  background-color: #0000EC;
+  margin-top: 10px;
+}
+
+/* Mediante al selector de hermanos (~) hago que cuando el ckeckbox esta en estado :checked, se muestre el nav, y cuando no lo esté, el menú se oculte.  */
+.burguer #lanzador:checked ~ nav {
+  /* cuando el checkbox está en estado :checked, muestro la barra de navegación  */
+  display: block;
+}
+
+.burguer #lanzador:checked ~ label .burguer-linea:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.burguer #lanzador:checked ~ label .burguer-linea:nth-child(2) {
+  opacity: 0;
+}
+
+.burguer #lanzador:checked ~ label .burguer-linea:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+} 
+
+
+
 /* transformo el menu vertical a horizontal a partir de los 768px */
 @media only screen and (min-width: 768px){
   
@@ -161,15 +245,75 @@ a {
     opacity: .56;
     text-decoration: line-through;
   }
+
+
+
+  .burguer {
+    width: 86.11%;
+    height: 80px;
+    line-height: 50px;
+    margin: auto auto 8.334vw auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #lanzador{
+    display: none;
+    opacity: 0;
+  }
+
+  .burguer label {
+    display: none;
+    opacity: 0;
+  }
+  
+  .burguer img {
+    width: 36px;
+    height: auto;
+    margin:0;
+  }
+  
+  .burguer nav {
+    /* para que el menú aparezca siempre, aunque el checkbox haya quedado not checked */
+    display: block;
+    
+    background-color: #FFFFFF;
+  }
+  
+  .burguer nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    height: auto;
+  }
+  
+  .burguer nav ul li a {
+    color: #060A24;
+    text-shadow: none;
+    padding: 10px 0 10px 40px;
+  }
+  
+  .burguer nav ul li a:link {
+    color: #060A24;
+  }
+  
+  .burguer nav ul li a:hover {
+    color: #00F3BB;
+    text-decoration: line-through;
+  }
+  
+  .burguer nav ul li a:active {
+    color: #060A24;
+    opacity: .56;
+    text-decoration: line-through;
+  }
 }
 /* Fin NAV con menú hamburguesa -------------------------------------*/
-
 
 /* TITULO Textos del encabezado -------------------------------------------*/
 .encabezado {
   width: 90%;
   margin: auto;
-  padding: 10vw 0 1.6rem 0;
+  padding: 12vw 0 1.6rem 0;
 }
 
 
@@ -311,7 +455,7 @@ a {
 /* SECCIONES ------------------------------------------------------ */
 /* EPISODIOS --------------------------------------------*/
 .episodios{
-  margin-top: 11vh;
+  margin-top: 14vh;
   height: 1040px;
   position: relative;
 }
@@ -342,7 +486,7 @@ con un gradiente linear 90º como imágen de fondo*/
 .episodios h2 {
   display: inline-block;
   font-size: 36px;
-  margin: 0px auto 10px 16px;
+  margin: 0px auto 12px 16px;
   color: #FFFFFF;
 }
 
@@ -364,7 +508,7 @@ con un gradiente linear 90º como imágen de fondo*/
   
   .episodios h2 {
     font-size: 48px;
-    margin: 95px auto 26px 200px;
+    margin: 95px auto 35px 200px;
   }
 
   .episodios::before {
@@ -411,7 +555,9 @@ con un gradiente linear 90º como imágen de fondo*/
 }
 
 .venimos article h2 {
-  margin: 1.4rem 0 0 0;
+  margin: 2rem 0 0 0;
+  font-size: 2.25rem;
+  line-height: 2.62rem;
 }
 
 .venimos article p {
@@ -469,7 +615,7 @@ con un gradiente linear 90º como imágen de fondo*/
   }
 
   .venimos article h2 {
-    margin-top: 4rem;
+    margin-top: 2.5rem;
   }
 
   .venimos article p {
@@ -653,7 +799,7 @@ con un gradiente linear 90º como imágen de fondo*/
   width: 90%;
   margin: auto;
   max-width: 80%;
-  height: 95px; 
+  height: 120px; 
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -664,9 +810,10 @@ con un gradiente linear 90º como imágen de fondo*/
   font-family: 'IBM Plex Mono', monospace;
   font-size: 14px;
   text-align: center;
+  margin-top: 10px;
 }
 
-.pieDePagina ul {
+.socialesFlex {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -680,6 +827,7 @@ con un gradiente linear 90º como imágen de fondo*/
 @media only screen and (min-width: 768px) {
   .pieDePagina {
     width: 86.11%;
+    height: 95px; 
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -689,17 +837,16 @@ con un gradiente linear 90º como imágen de fondo*/
   .pieDePagina p {
     font-size: 16px;
     height: 16px;
+    margin-top: 0;
     
   }
-  .socialesGrilla {
-    /* width: 16.25%; */
+  .socialesFlex {
     width: 234px;
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
   }
   
-  .socialesGrilla li {
-    height: auto;
+  .socialesFlex li {
     font-size: 18px;
   }
 }
@@ -709,53 +856,13 @@ con un gradiente linear 90º como imágen de fondo*/
 
 /* *prueba para un menú activador animado */
 
-/* <div class="burguer">
-<input type="checkbox" id="lanzador" />
-<label for="lanzador">
-  <span class="burguer-linea"></span>
-  <span class="burguer-linea"></span>
-  <span class="burguer-linea"></span>
-</label>
+/* 
+<div class="burguer">
+  <input type="checkbox" id="lanzador" />
+  <label for="lanzador">
+    <span class="burguer-linea"></span>
+    <span class="burguer-linea"></span>
+    <span class="burguer-linea"></span>
+  </label>
 </div>
  */
-
-
-
-/* .burguer {
-  width: 30px;
-  height: 20px;
-  margin: 100px auto;
-}
-
-.burguer #lanzador {
-  position: absolute;
-  left: -9999px;
-}
-
-.burguer label {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  cursor: pointer;
-}
-
-.burguer .burguer-linea {
-  height: 2px;
-  background-color: #000;
-  opacity: 1;
-  transform: translateY(0) rotate(0);
-  transition: all 0.3s;
-}
-
-.burguer #lanzador:checked ~ label .burguer-linea:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
-}
-
-.burguer #lanzador:checked ~ label .burguer-linea:nth-child(2) {
-  opacity: 0;
-}
-
-.burguer #lanzador:checked ~ label .burguer-linea:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
-} */
