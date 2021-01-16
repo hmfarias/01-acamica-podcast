@@ -33,9 +33,7 @@ a {
   line-height: 2.3em;
 }
 
-
 /* Para el menú hamburguesa -----------------------------------------*/
-
 .respmenu ul {
   height: 224px;
   display: flex;
@@ -210,7 +208,7 @@ a {
 .button {
   display: block;
   color: #060a24;
-  font-size: 1em;
+  font-size: 16px;
   font-weight: 500;
   padding: .5em;
   text-align: center;
@@ -270,9 +268,7 @@ a {
   .encabezado p:last-of-type {
     display: inline-block;
     width: 70%;
-
   }
-
 
   .titulo {
     /* para que el texto quede en dos filas  */
@@ -637,11 +633,18 @@ con un gradiente linear 90º como imágen de fondo*/
   }
 
   .novedades .button {
-    width: 23.959%;
+    width: 30%;
     height: 56px;
     margin-bottom: 151px;
   }
 }
+
+@media only screen and (min-width: 1440px) {
+  .novedades .button {
+    width: 23.959%;
+  }
+}
+
 /*FIN NOVEDADES --------------------------------------------*/
 /* FIN SECCIONES  ------------------ */
 
@@ -699,12 +702,10 @@ con un gradiente linear 90º como imágen de fondo*/
     height: auto;
     font-size: 18px;
   }
-
-
-
-
 }
 /*FIN FOOTER --------------------------------------------*/
+
+
 
 /* *prueba para un menú activador animado */
 
