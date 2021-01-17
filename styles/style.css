@@ -169,6 +169,14 @@ a {
     text-decoration: line-through;
   }
 }
+/* PARA QUE NO CREZCA MAS ALLÁ DE  LOS 1440 */
+@media only screen and (min-width: 1440px) {
+  .burguer {
+    max-width: 1440px;
+    margin: auto auto 8.334vw auto;
+  }
+}
+
 /* Fin NAV con menú hamburguesa -------------------------------------*/
 
 /* TITULO Textos del encabezado -------------------------------------------*/
@@ -311,6 +319,13 @@ a {
   }   
 }
 
+/* PARA QUE NO CREZCA MAS ALLÁ DE  LOS 1440 */
+@media only screen and (min-width: 1440px) {
+  .encabezado {
+    max-width: 1440px;
+    margin: auto;
+  }
+}
 /* FIN Textos del encabezado ----------------------------------------*/
 
 /* SECCIONES ------------------------------------------------------ */
@@ -401,12 +416,17 @@ con un gradiente linear 90º como imágen de fondo*/
 @media only screen and (min-width: 1440px) {
   .episodios {
     height: 760px;
+    
+    /* PARA QUE NO CREZCA MAS ALLÁ DE  LOS 1440 */
+    max-width: 1440px;
+    margin: auto;
   }
   .episodios::before {
     top: -1%;
     height: 117%;
   }
 }
+
 /* FIN EPISODIOS -------------------------------------------------------*/
 
 /* QUIENES SOMOS --------------------------------------------*/
@@ -479,7 +499,7 @@ con un gradiente linear 90º como imágen de fondo*/
   .venimos {
     width: 70%;
     grid-template-columns: 44% 43%;
-    grid-template-rows: 30% 15% 20% 20% 15%;
+    grid-template-rows: 40% 23% 23% 7% 7%;
     column-gap: 5.7%;
   }
   
@@ -492,20 +512,22 @@ con un gradiente linear 90º como imágen de fondo*/
   }
 }
 
-
-
 @media only screen and (min-width: 1440px){
   .venimos {
     width: 72.22%;
-    grid-template-columns: 44% 45%;
+    grid-template-columns: 457.55px 467.98px;
     grid-template-rows: 40% 15% 15% 15% 15%;
     gap: 0;
     column-gap: 5.7%;
     margin-top: .8rem;
+
+    /* PARA QUE NO CREZCA MAS ALLÁ DE  LOS 1440 */
+    max-width: 1040px;
+    margin: auto;
   }
 
   .venimos h2 {
-    margin-top: 9rem;
+    margin-top: 240px;
     font-size: 48px;
   }
 
@@ -521,6 +543,10 @@ con un gradiente linear 90º como imágen de fondo*/
     grid-area: 3 / 2 / span 1 / span 1;
     margin-top: 0;
 
+  }
+
+  .venimos img {
+    max-width: 457.56px;
   }
 }
 
@@ -567,6 +593,14 @@ con un gradiente linear 90º como imágen de fondo*/
   .invitadosGrilla {
     display: grid;
     grid-template-columns: repeat(3, 33.33%);
+  }
+}
+
+/* PARA QUE NO CREZCA MAS ALLÁ DE  LOS 1440 */
+@media only screen and (min-width: 1440px){
+  .invitados{
+    max-width: 1440px;
+    margin: auto;
   }
 }
 /*FIN NVITADOS --------------------------------------------*/
@@ -631,6 +665,17 @@ con un gradiente linear 90º como imágen de fondo*/
     line-height: 32px;
   }
 }
+
+/* PARA QUE NO CREZCA MAS ALLÁ DE  LOS 1440 */
+@media only screen and (min-width: 1440px){
+  .temas{
+    max-width: 1040px;
+    margin: auto;
+  }
+  .temasGrilla {
+    max-width: 1000px;
+  }
+}
 /*FIN TEMAS --------------------------------------------*/
 
 /*NOVEDADES --------------------------------------------*/
@@ -681,6 +726,10 @@ con un gradiente linear 90º como imágen de fondo*/
 }
 
 @media only screen and (min-width: 1440px) {
+  .novedades {
+    max-width: 1440px;
+    margin: auto;
+  }
   .novedades .button {
     width: 23.959%;
   }
@@ -743,4 +792,9 @@ con un gradiente linear 90º como imágen de fondo*/
     font-size: 18px;
   }
 }
+@media only screen and (min-width: 1440px) {
+  .pieDePagina {
+    max-width: 1240px;
+    margin: auto;
+  }
 /*FIN FOOTER --------------------------------------------*/
