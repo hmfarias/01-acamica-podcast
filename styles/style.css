@@ -670,7 +670,7 @@ con un gradiente linear 90º como imágen de fondo*/
 @media only screen and (min-width: 1440px){
   .temas{
     max-width: 1040px;
-    margin: auto;
+    margin: 64px auto auto auto;
   }
   .temasGrilla {
     max-width: 1000px;
