@@ -355,7 +355,6 @@ con un gradiente linear 90º como imágen de fondo*/
   z-index: -1;
   
   /* deformo en un angulo de -6º para que quede como un paralelogramo de lo contrario es sólo un rectángulo */
-  -webkit-transform: skew(0, -6deg);
   transform: skew(0, -6deg);
 }
 
