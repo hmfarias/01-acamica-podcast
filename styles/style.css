@@ -280,7 +280,7 @@ a {
 
   .encabezado p:last-of-type {
     display: inline-block;
-    width: 70%;
+    width: 80%;
   }
 
   .titulo {
@@ -325,6 +325,11 @@ a {
     max-width: 1440px;
     margin: auto;
   }
+
+  .encabezado p:last-of-type {
+    width: 630px;
+  }
+
 }
 /* FIN Textos del encabezado ----------------------------------------*/
 
