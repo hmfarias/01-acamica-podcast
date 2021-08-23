@@ -4,7 +4,7 @@ Desarrollo Web Full Stack - Proyecto integrador Sprint 1 - HTML y CSS
 
 Sitio: https://hmfarias.github.io/01-acamica-podcast/
 
-Repositorio: https://github.com/hmfarias/acamica-podcast.git
+Repositorio: https://github.com/hmfarias/01-acamica-podcast.git
 
 # Podcast Channel
 
